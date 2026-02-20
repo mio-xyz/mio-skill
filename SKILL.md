@@ -3,20 +3,16 @@ name: mio-skill
 description: >-
   Personal context for AI agents via Mio. Loads user preferences, tech stack, coding conventions,
   and project context at session start so you can make informed decisions without re-asking.
-  Use when you have Mio MCP tools available (get_context, list_projects, log_conversation, etc.).
-compatibility: Requires Mio MCP server connection
-metadata:
-  author: mio-xyz
-  version: "1.0"
+  Use when any of these Mio MCP tools are available: get_context, list_categories, list_projects,
+  set_active_project, log_conversation, update_profile. Triggers on: (1) session start to load
+  user context before working, (2) code tasks where user conventions matter, (3) project-scoped
+  work where project context is needed, (4) end of substantive conversations to log takeaways,
+  (5) when the user expresses a new or changed preference to suggest a profile update.
 ---
 
 # Mio — Personal Context for AI Agents
 
 Mio gives you access to the user's personal context: their tech stack, coding conventions, communication style, project details, and preferences. Instead of asking the user to repeat themselves, check Mio first.
-
-## When This Skill Applies
-
-Activate this skill when any of these Mio MCP tools are available: `get_context`, `list_categories`, `list_projects`, `set_active_project`, `log_conversation`, `update_profile`. If none are available, skip this skill entirely.
 
 ## Session Start
 
